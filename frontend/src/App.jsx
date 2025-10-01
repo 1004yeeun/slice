@@ -1,7 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { auth, signInGoogle, logout } from './firebase';
+import axios from 'axios';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
+const API = import.meta.env.VITE_API_URL;
 
 function App() {
   const [count, setCount] = useState(0)
